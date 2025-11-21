@@ -1,0 +1,6 @@
+ docker run -d --name mongo-exp --network jai-work -e MONGO_INITDB_ROOT_USERNAME=admin -e MONGO_INITDB_ROOT_PASSWORD=password -e ME_CONFIG_MONGODB_ADMINUSERNAME=admin -e ME_CONFIG_MONGODB_ADMINPASSWORD=password -e ME_CONFIG_MONGODB_SERVER=mongodb -p 8081:8081 mongo-express
+
+
+
+docker run -d --name mongodb --network jai-work -e MONGO_INITDB_ROOT_USERNAME=admin -e MONGO_INITDB_ROOT_PASSWORD=password -p 27017:27017 -v my-data:/data/db mongo:latest docker run -d --name mongodb --network jai-work -e MONGO_INITDB_ROOT_USERNAME=admin -e MONGO_INITDB_ROOT_PASSWORD=password -p 27017:27017 -v my-data:/data/db mongo:latest
+
