@@ -12,19 +12,11 @@ app.use(cors());
 app.use(bodyParser.json());
 
 // Database connection
-const mysql = require('mysql');
 const db = mysql.createConnection({
-<<<<<<< HEAD
   host: process.env.DB_HOST || 'mysql', // Use 'mysql' to connect to MySQL container
   user: process.env.DB_USER || 'root',
   password: process.env.DB_PASSWORD || 'password',
   database: process.env.DB_NAME || 'test_db',
-=======
-  host: process.env.DB_HOST || 'mysql',
-  user: process.env.DB_USER || 'root',
-  password: process.env.DB_PASSWORD || 'password',
-  database: process.env.DB_NAME || 'test_db'
->>>>>>> 32c375469072bf3b816b029191035fbebfa6937d
 });
 
 db.connect((err) => {
