@@ -28,7 +28,7 @@ services:
        build : 
        container_name: nodejs_container
        depends_on:
-            mysql:
+            mysql_container:
               condition: service_healthy
 
        ports:
